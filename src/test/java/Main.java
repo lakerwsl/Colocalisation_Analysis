@@ -41,8 +41,8 @@ public class Main {
 		// open the Confocal Series sample (to test z-stacks)
 		ImagePlus confocalImage = IJ.openImage("http://imagej.net/images/confocal-series.zip");
 		ImagePlus[] confocalchannels = ChannelSplitter.split(confocalImage);
-		confocalchannels[0].show();
-		confocalchannels[1].show();
+//		confocalchannels[0].show();
+//		confocalchannels[1].show();
 		// run the plugin, Coloc 2
 		IJ.run("Coloc 2", "channel_1=C1-confocal-series.tif channel_2=C2-confocal-series.tif roi_or_mask=<None> threshold_regression=Costes display_images_in_result li_histogram_channel_1 li_histogram_channel_2 li_icq spearman's_rank_correlation manders'_correlation kendall's_tau_rank_correlation 2d_instensity_histogram costes'_significance_test psf=3 costes_randomisations=10");
 	}
